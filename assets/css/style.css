@@ -1,0 +1,29 @@
+header{
+    height: 10vh;
+    gap: 35px;
+}
+
+main{
+    background-color: lightblue;
+    height: 90vh;
+    width: 100%;
+    padding: 50px;
+}
+
+.container-main{
+    background-color: white;
+    /* height fissa per costruire progetto base */
+    height: 60%; 
+    width: 50%;
+    margin: 0 auto;
+}
+
+.container-main > div{
+    padding: 20px;
+}
+.main-header{
+    border-bottom: 1px solid lightblue;
+}
+ul li{
+    list-style-type: none;
+}
