@@ -21,6 +21,10 @@ createApp({
         }
     },
     methods: {
-        
+        funzioneClick(){
+            console.log('verifica')
+
+            // const span = document.querySelector('')
+        }
     }
-})
+}).mount('#app')

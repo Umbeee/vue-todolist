@@ -25,5 +25,13 @@ main{
     border-bottom: 1px solid lightblue;
 }
 ul li{
-    list-style-type: none;
+    list-style-type:decimal;
+}
+
+.true{
+    text-decoration: line-through;
+}
+li span,
+li a{
+    padding: 5px;
 }
