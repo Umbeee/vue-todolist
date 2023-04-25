@@ -21,15 +21,20 @@
         <main>
             <div class="container-main rounded">
                 <div class="main-header">
-                    <button class="btn btn-primary">add Todo</button>
-                    <button class="btn btn-dark">add Section</button>
+                    <!-- input con keyup.enter che permette di inviare al tasto invio della tastiera -->
+                    <input type="text" v-model="testoTodo" @KeyUp.enter="creaTodo">
+                    <button class="btn btn-primary" @click="creaTodo()" >add Todo</button>
                 </div>
                 <div class="main-body">                            
-                    <h3>list:</h3>
                     <ul>
-                        <li v-for="(elem, index) in todos " :key="index" class="list-item" :class="elem.done == true ? 'true' : ''">
-                            <span>{{elem.text}}</span>
-                            <button class="btn" @click="funzioneClick">x</button>
+                        <li v-for="(elem, index) in todos " :key="index" class="list-item" >
+                            <span 
+                            :class=" elem.done == true ? 'true' : '' " 
+                            @click="elem.done = !elem.done"
+                            >
+                                {{elem.text}}
+                            </span>
+                            <a class="btn btn-danger" @click="funzioneClick(elem, index)" >x</a>
                         </li>
                     </ul>
                 </div>

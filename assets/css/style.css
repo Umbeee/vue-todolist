@@ -5,15 +5,13 @@ header{
 
 main{
     background-color: lightblue;
-    height: 90vh;
+    min-height: 90vh;
     width: 100%;
     padding: 50px;
 }
 
 .container-main{
     background-color: white;
-    /* height fissa per costruire progetto base */
-    height: 60%; 
     width: 50%;
     margin: 0 auto;
 }
@@ -23,9 +21,15 @@ main{
 }
 .main-header{
     border-bottom: 1px solid lightblue;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 ul li{
     list-style-type:decimal;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .true{
@@ -34,4 +38,17 @@ ul li{
 li span,
 li a{
     padding: 5px;
+}
+
+input{
+    height: 38px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+.btn-danger{
+    --bs-btn-padding-x: 0.6rem;
+    --bs-btn-padding-y: 0.2rem;
+}
+span:hover{
+    cursor: pointer;
 }

@@ -1,4 +1,5 @@
 const {createApp} = Vue
+let testoTodo = ''
 
 createApp({
     data(){
@@ -19,12 +20,22 @@ createApp({
             ]
     
         }
+       
     },
     methods: {
-        funzioneClick(){
-            console.log('verifica')
 
-            // const span = document.querySelector('')
+
+        creaTodo(){
+            this.todos.push(
+                {
+                    text: this.testoTodo,
+                    done: false
+                }
+            )
+        },
+        funzioneClick(elem, i){
+            this.todos.splice(i, 1)
         }
+
     }
 }).mount('#app')
